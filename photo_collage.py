@@ -3,10 +3,10 @@ import os
 import random
 
 # Replace 'image_folder' with the actual path to your image folder
-image_folder = '/Users/henrywang/Pictures/'
+image_folder = './images'
 
 # Replace 'output_path' with the desired output path
-output_path = '/Users/henrywang/Pictures/collage.jpg'
+output_path = './output/collage.jpg'
 
 output_dpi = 300
 num = 20
