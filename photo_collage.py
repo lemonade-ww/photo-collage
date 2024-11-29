@@ -1,4 +1,4 @@
-from PIL import Image
+from PIL import Image, ImageOps
 import os
 import random
 
@@ -35,6 +35,7 @@ def create_collage(image_folder, output_path, collage_size, number):
         if filename[0] != '.':
             image_path = os.path.join(image_folder, filename)
             img = Image.open(image_path)
+            img = ImageOps.exif_transpose(img)
             img = crop_to_square(img)
             img = img.resize((slot_size, slot_size))
             images.append(img)
